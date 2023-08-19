@@ -22,6 +22,7 @@ Via an interface it is simple to add your custom supplier for email server setti
 
 
 **DNS settings**
+
 For autodiscover and autoconfig to work, you need to add DNS records to the autodiscover domain you want to configure
 
 ```
