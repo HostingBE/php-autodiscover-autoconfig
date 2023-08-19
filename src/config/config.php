@@ -13,13 +13,13 @@ return [
                         ],
                     'db' => [
      'host' => 'localhost',
-     'username' => 'research_emailre',
-     'database' => 'research_emailreseller_com',
-     'password' => 'fpnCcqHW7lgHAyY',
+     'username' => 'username',
+     'database' => 'database',
+     'password' => 'password',
                  ],
-                    'supporturl' => 'https://emailreseller.com/help-support',
-                    'sitename' => 'EmailReseller',
-                    'url' => 'emailreseller.com',
+                    'supporturl' => 'https://yourdomain.com/help-support',
+                    'sitename' => 'YourDomain',
+                    'url' => 'yourdomain.com',
                     ],
          
 ]

@@ -1,6 +1,6 @@
 {
     "name": "hostingbe/php-autodiscover-autoconfig",
-    "description": "PHP API client to connect to HostingBE's API, including logging and retry functionality.",
+    "description": "PHP program to automatically configure email accounts in IMAP, POP3, SMTP in the email program via autodiscover, autoconfig or configuration profiles for Apple mail. Email programs that are supported are Outlook, Thunderbird, Apple mail, EMclient and other email programs that support autodiscover",
     "keywords": ["php autodiscover", "php autoconfig", "IMAP autodiscover","IMAP autoconfig"],
     "license": "MIT",
     "support": {
