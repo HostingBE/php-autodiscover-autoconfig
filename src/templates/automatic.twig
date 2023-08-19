@@ -1,0 +1,77 @@
+{% include "header.twig" %}
+
+<div class="container">
+    
+    <h1 class="py-2">Configure your email program automatically</h1>
+
+<div class="row">
+	<div class="col-md-6 col-sm-12">  
+<p>You can set up different mail programs automatically by just entering the email address and possibly the password. Some programs need some extra settings for this. We have listed these necessary settings on this page.</p>
+</div>
+
+<div class="col-md-6 col-sm-12">
+
+<div class="accordion" id="accordionAutodiscover">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        DNS settings for autodiscover
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionAutodiscover">
+      <div class="accordion-body">
+      You need several <strong>extra DNS settings</strong> in you DNS zone to make autodiscovery work, these settings can be changed via your domain register.
+      
+      <div class="alert alert-warning">
+      <ul class="list-unstyled">
+          <li>autodiscover IN CNAME autodiscover.{{url}}</li>
+          <li>autoconfig IN CNAME autoconfig.{{url}}</li>
+          <li>_autodiscover._tcp IN SRV 10 10 443 autodiscover.{{url}}</li>
+	 </ul>
+     </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Mail programs which support autodiscover
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul class="list-unstyled">
+        <li>Outlook version 2007, 2010, 2013, 2016, 2019, 365</li>
+        <li>Thunderbird via autodiscover and autoconfig</li>
+        <li>Windows mail</li>
+        <li>Emclient</li>
+        <li>yours?</li>
+        <li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Extra information Outlook 2019 and 365
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        With the <strong>simple setup</strong> the autodiscovery will fail, you need to change the registry via the following command to initiate autodiscover.
+
+        <div class="alert alert-warning">REG ADD HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Setup /v DisableOffice365SimplifiedAccountCreation /t REG_DWORD /d 1 /f</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>	
+
+</div>
+</div>
+
+{% include "footer.twig" %}

@@ -1,0 +1,49 @@
+{% include "header.twig" %}
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-6 col-sm-12">
+
+<div class="card">
+	<div class="card-header bg-primary bg-opacity-25 text-white"><h1>Email address</h1></div>
+	<div class="card-body">
+<form name="manual" action="/manual" method="POST">
+
+<div class="row m-2">
+<label class="col-3">Email address</label>
+<div class="col-9">
+<input type="text" class="form-control" name="email" value="" placeholder="your email address .. ">
+</div>
+</div>
+
+<button type="submit" class="btn btn-primary float-end">get settings</button>
+</form>	
+
+</div>
+
+
+	</div>
+</div>
+<div class="col-md-6 col-sm-12">
+
+<div class="card">
+	<div class="card-header"><h2>Manual configuration</h2></div>
+	<div class="card-body">
+    <p>If you want to set the settings of your email program manually, enter your email address and click on the button get settings. You can then use these settings to set up your email program.</p>
+
+	</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% include "footer.twig" %}
+
+
+
+
+
+

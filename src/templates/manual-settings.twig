@@ -1,0 +1,52 @@
+{% include "header.twig" %}
+
+<div class="container">
+<h1 class="py-3">Manual configuration results</h1>
+<p>Use the settings below in your email program, we advise you to always choose IMAP. With IMAP, the e-mail remains on the server and you have access to the same e-mail everywhere.</p>
+
+<div class="row">
+<div class="col-md-6 col-sm-12">
+	
+{% if imap %}
+<h2>Incoming server (IMAP)</h2>
+<dl>
+	<dt>Hostname</dt><dd>{{imap.host}}</dd>
+    <dt>Port</dt><dd>{{imap.port}}</dd>
+    <dt>Encryption</dt><dd>{{imap.encryption}}</dd>
+    <dt>SSL</dt><dd>{{imap.ssl}}</dd>
+    <dt>Username</dt><dd>{{email}}</dd>
+</dl>	
+{% endif %}
+
+{% if not imap %}
+<h2>Incoming server (POP3)</h2>
+<dl>
+	<dt>Hostname</dt><dd>{{pop.host}}</dd>
+    <dt>Port</dt><dd>{{pop.port}}</dd>
+    <dt>Encryption</dt><dd>{{pop.encryption}}</dd>
+    <dt>SSL</dt><dd>{{pop.ssl}}</dd>
+    <dt>Username</dt><dd>{{email}}</dd>
+</dl>	
+{% endif %}
+
+</div>
+<div class="col-md-6 col-sm-12">
+
+{% if smtp %}
+<h2>Outgoing server (SMTP)</h2>
+<dl>
+	<dt>Hostname</dt><dd>{{smtp.host}}</dd>
+    <dt>Port</dt><dd>{{smtp.port}}</dd>
+    <dt>Encryption</dt><dd>{{smtp.encryption}}</dd>
+    <dt>SSL</dt><dd>{{smtp.ssl}}</dd>
+    <dt>Username</dt><dd>{{email}}</dd>
+</dl>	
+{% endif %}
+
+</div>
+</div>
+</div>
+
+
+{% include "footer.twig" %}
+
