@@ -1,5 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
+	name = Constan van Suchtelen van de Haere
+	email = constan@hostingbe.com
 # Please adapt and uncomment the following lines:
 #	name = website autodiscover.emailreseller.com
 #	email = autodiscover@server02.hostingbe.com
