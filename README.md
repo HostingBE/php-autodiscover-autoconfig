@@ -5,6 +5,7 @@ This is a PHP script written in SLIM 4 framework which runs on a virtual server 
 **Installing this script** 
 
 ```git clone https://github.com/HostingBE/php-autodiscover-autoconfig.git```
+``` composer update```
 
 Open config/config.php and enter the configuration settings which apply to you. Their are two methods included to retrieve the email server settings. 
 
